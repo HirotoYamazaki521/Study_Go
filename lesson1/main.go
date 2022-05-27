@@ -1,9 +1,10 @@
 package main //packageの宣言は１つだけ
 
-import "fmt" //format packageでprint println等のパッケージ
-
+import (
+	"fmt"
+) //format packageでprint println等のパッケージ
 //Helloworld
 
 func main() {
-	fmt.Println("Hello,World")
+	fmt.Println("Hello World")
 }
