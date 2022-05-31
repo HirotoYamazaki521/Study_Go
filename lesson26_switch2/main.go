@@ -13,4 +13,10 @@ func anything(a interface{}) {
 func main() {
 	anything("aaa")
 	anything(1)
+
+	var x interface{} = 3
+
+	i := x.(int)
+
+	fmt.Println(i + 2)
 }
