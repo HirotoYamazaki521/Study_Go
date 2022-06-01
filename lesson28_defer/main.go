@@ -8,7 +8,7 @@ import (
 //defer
 //関数の終了時に実行される処理を登録することができる
 
-func TestDeffer() {
+func TestDefer() {
 	defer fmt.Println("END") //最後に実行される
 	fmt.Println("START")
 }
@@ -21,7 +21,7 @@ func RunDefer() {
 }
 
 func main() {
-	TestDeffer()
+	TestDefer()
 
 	/*
 		defer func() { //無名関数
