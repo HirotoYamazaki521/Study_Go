@@ -1,0 +1,5 @@
+2022/06/09 17:01:15 main.go:16: test
+2022/06/09 17:30:39 base.go:42: incomplete input
+2022/06/09 18:59:35 todos.go:48: no such column: cotent
+2022/06/09 19:00:30 todos.go:58: sql: Scan error on column index 3, name "created_at": destination not a pointer
+2022/06/09 19:03:45 todos.go:57: sql: Scan error on column index 3, name "created_at": destination not a pointer
