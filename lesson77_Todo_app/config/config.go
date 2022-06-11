@@ -14,12 +14,14 @@ type ConfigList struct {
 	SQLDriver string
 	DbName    string
 	LogFile   string
+	Static    string
 }
 
 //ConfigListを外部のパッケージからでも呼び出せるようにグローバルに変数宣言
 var Config ConfigList
 
 //main関数より前に実行したい
+//init関数はmain関数より先に呼び出される
 func init() {
 	LoadConfig()
 	utils.LoggingSettings(Config.LogFile)
@@ -36,5 +38,7 @@ func LoadConfig() {
 		SQLDriver: cfg.Section("db").Key("driver").String(),
 		DbName:    cfg.Section("db").Key("name").String(),
 		LogFile:   cfg.Section("web").Key("logfile").String(),
+		Static:    cfg.Section("web").Key("static").String(), //app/viewsの静的ファイルcss、jsを設定
+
 	}
 }
