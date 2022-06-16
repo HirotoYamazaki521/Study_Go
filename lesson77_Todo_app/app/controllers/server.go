@@ -2,10 +2,11 @@ package controllers
 
 import (
 	"fmt"
-	"lesson77_Todo_app/app/models"
-	"lesson77_Todo_app/config"
 	"net/http"
 	"text/template"
+
+	"lesson77_Todo_app/app/models"
+	"lesson77_Todo_app/config"
 )
 
 //ハンドラ関数でテンプレートを渡して表示

@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"lesson77_Todo_app/app/models"
 	"log"
 	"net/http"
+
+	"lesson77_Todo_app/app/models"
 )
 
 //signupのハンドラを作成
