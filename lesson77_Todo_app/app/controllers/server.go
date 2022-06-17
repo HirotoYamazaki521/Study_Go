@@ -16,8 +16,7 @@ func generateHTML(w http.ResponseWriter, data interface{}, filenames ...string) 
 		files = append(files, fmt.Sprintf("app/views/templates/%s.html", file))
 	}
 	/*
-		filenamesのファイルを取り出し、Sprintfで呼び出したファイルパスに入れて、
-		filesに格納する
+		filenamesのファイルを取り出し、Sprintfで呼び出したファイルパスに入れて、filesに格納する
 	*/
 	//defineで宣言したファイルを読み込む場合はExecuteTemplateで明示的に宣言する必要あり
 	templates := template.Must(template.ParseFiles(files...)) //エラーが起きたらパニック状態になる
