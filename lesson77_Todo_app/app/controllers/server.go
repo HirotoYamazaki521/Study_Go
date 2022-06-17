@@ -3,6 +3,7 @@ package controllers
 import (
 	"fmt"
 	"net/http"
+
 	"regexp"
 	"strconv"
 	"text/template"
@@ -64,6 +65,7 @@ func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc
 	}
 }
 
+
 func StartMainServer() error {
 	//css、jsファイルを読み込む
 	files := http.FileServer(http.Dir(config.Config.Static))
@@ -85,6 +87,7 @@ func StartMainServer() error {
 	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
 	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
 	http.HandleFunc("/todos/delete/", parseURL(todoDelete))
+
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 	/*
 		config.iniで設定したポート番号の値を読み込む
