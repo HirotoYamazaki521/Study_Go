@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"lesson77_Todo_app/app/controllers"
 	"lesson77_Todo_app/app/models"
 )
@@ -94,4 +95,22 @@ func main() {
 
 	//サーバーの立ち上げ
 	controllers.StartMainServer()
+
+	/*
+		//入力されたEメールアドレスからDBのユーザーを取得
+		user, _ := models.GetUserByEmail("test@example.com")
+		fmt.Println(user)
+
+		//セッションの作成
+		session, err := user.CreateSession()
+		if err != nil {
+			log.Println(err)
+		}
+		fmt.Println(session)
+
+		//セッションの確認
+		valid, _ := session.CheckSession()
+		fmt.Println(valid)
+	*/
+
 }
